@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Back"
+            android:textColor="@color/ml_blue"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textColor="@color/ml_navy"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="16dp"
+            android:weightSum="4">
+            <View android:id="@+id/bar1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/ml_blue" android:layout_marginEnd="4dp"/>
+            <View android:id="@+id/bar2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/ml_gray" android:layout_marginEnd="4dp"/>
+            <View android:id="@+id/bar3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/ml_gray" android:layout_marginEnd="4dp"/>
+            <View android:id="@+id/bar4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/ml_gray"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvStepCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 1 of 4"
+            android:layout_marginTop="8dp"
+            android:textColor="#64748B" />
+
+        <LinearLayout
+            android:id="@+id/step1Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Personal Information" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="24dp" android:textColor="@color/ml_navy"/>
+            <EditText android:id="@+id/etFirstName" android:layout_width="match_parent" android:layout_height="55dp" android:hint="First Name" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="16dp" android:inputType="textPersonName"/>
+            <EditText android:id="@+id/etSurname" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Surname" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:inputType="textPersonName"/>
+            <EditText android:id="@+id/etIDNumber" android:layout_width="match_parent" android:layout_height="55dp" android:hint="ID Number" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:inputType="number"/>
+            <Spinner android:id="@+id/spinnerGender" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="12dp" android:background="@drawable/input_background" android:entries="@array/gender_options"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/step2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact &amp; Address" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="24dp" android:textColor="@color/ml_navy"/>
+            <EditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Email Address" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="16dp" android:inputType="textEmailAddress"/>
+            <EditText android:id="@+id/etPhone" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Phone Number" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:inputType="phone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/step3Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Medical Information" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="24dp" android:textColor="@color/ml_navy"/>
+            <CheckBox android:id="@+id/cbMedicalAid" android:layout_width="match_parent" android:layout_height="60dp" android:text="I have Medical Aid" android:layout_marginTop="16dp" android:buttonTint="@color/ml_blue" android:background="@drawable/input_background" android:paddingStart="12dp"/>
+            <EditText android:id="@+id/etMedicalProvider" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Provider Name" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:visibility="gone"/>
+            <EditText android:id="@+id/etMedicalNumber" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Member Number" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/step4Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Login Details" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="24dp" android:textColor="@color/ml_navy"/>
+            <EditText android:id="@+id/etPassword" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Password" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="16dp" android:inputType="textPassword"/>
+            <EditText android:id="@+id/etConfirmPassword" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Confirm Password" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:inputType="textPassword"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:text="Next"
+            android:backgroundTint="@color/ml_blue"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+</ScrollView>

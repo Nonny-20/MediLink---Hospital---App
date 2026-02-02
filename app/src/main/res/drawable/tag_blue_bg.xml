@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/ml_tag_blue" />
+    <corners android:radius="20dp" />
+     xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="#3B82F6" />
+        <corners android:radius="20dp" />
+
+</shape>
