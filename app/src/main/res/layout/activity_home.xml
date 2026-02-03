@@ -18,7 +18,8 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@drawable/medilink_logo_icon"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginEnd="10dp"
+            android:contentDescription="MediLink Logo"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -54,6 +55,7 @@
             android:paddingBottom="20dp">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardEmergency"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:layout_margin="16dp"
@@ -69,6 +71,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/ic_emergency_icon"
+                        android:contentDescription="Emergency Icon"
                         app:tint="#FFFFFF"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -88,6 +91,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardComm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
@@ -104,7 +108,12 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:layout_marginBottom="12dp">
-                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_communication" app:tint="@color/ml_blue"/>
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_communication"
+                            android:contentDescription="News Icon"
+                            app:tint="@color/ml_blue"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MediLink News" android:textStyle="bold" android:layout_marginStart="8dp" android:textColor="@color/ml_navy"/>
                     </LinearLayout>
 
@@ -147,7 +156,12 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:layout_marginBottom="12dp">
-                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_theme" app:tint="#F59E0B"/>
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_theme"
+                            android:contentDescription="Updates Icon"
+                            app:tint="#F59E0B"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Medical Updates" android:textStyle="bold" android:layout_marginStart="8dp" android:textColor="@color/ml_navy"/>
                     </LinearLayout>
 
@@ -187,11 +201,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
         <ImageView
+            android:id="@+id/imgProfile"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/ic_user_circle"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Profile Picture"
             app:tint="@color/ml_blue"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

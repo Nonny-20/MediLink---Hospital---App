@@ -1,8 +1,8 @@
 package com.fmtaliproject.MediLink;
 
 import android.os.Bundle;
-import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class ProfileActivity extends AppCompatActivity {
     @Override
@@ -10,8 +10,12 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        // Handle Back Button
-        ImageView btnBack = findViewById(R.id.btnBackProfile);
-        btnBack.setOnClickListener(v -> finish());
+        // Link the CardView back button from your XML
+        CardView btnBack = findViewById(R.id.btnBack);
+
+        // Handle Back Button Click
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> finish());
+        }
     }
 }

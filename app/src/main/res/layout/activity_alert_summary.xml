@@ -24,6 +24,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_info"
+                android:contentDescription="Info Icon"
                 app:tint="#FFFFFF" />
 
             <TextView
@@ -60,7 +61,8 @@
                         android:layout_width="45dp"
                         android:layout_height="45dp"
                         android:src="@drawable/ic_bell"
-                        app:tint="#22C55E" />
+                        android:contentDescription="Success Icon"
+                        app:tint="#16A34A" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -103,6 +105,7 @@
                             android:layout_width="18dp"
                             android:layout_height="18dp"
                             android:src="@drawable/ic_news"
+                            android:contentDescription="Detail Icon"
                             app:tint="#1E3A8A" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -114,27 +117,33 @@
                     </LinearLayout>
 
                     <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Patient Name:" android:textColor="#64748B" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Patient Name:" android:textColor="#475569" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="John Doe" android:textColor="#1E293B" android:textStyle="bold" />
                     </RelativeLayout>
 
                     <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Age:" android:textColor="#64748B" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Age:" android:textColor="#475569" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="38 years" android:textColor="#1E293B" android:textStyle="bold" />
                     </RelativeLayout>
 
                     <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Location:" android:textColor="#64748B" />
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="123 Main St, City" android:textColor="#1E293B" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Urgency Level:" android:textColor="#475569" />
+                        <TextView
+                            android:id="@+id/summaryUrgency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:background="#C2410C"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="2dp"
+                            android:text="URGENT"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
                     </RelativeLayout>
 
                     <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Urgency Level:" android:textColor="#64748B" />
-                        <TextView android:id="@+id/summaryUrgency" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:background="#F97316" android:paddingHorizontal="10dp" android:paddingVertical="2dp" android:text="URGENT" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold" />
-                    </RelativeLayout>
-
-                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Time Sent:" android:textColor="#64748B" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Time Sent:" android:textColor="#475569" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="12:20:37 PM" android:textColor="#1E293B" android:textStyle="bold" />
                     </RelativeLayout>
                 </LinearLayout>
@@ -163,6 +172,7 @@
                     android:padding="20dp">
 
                     <TextView
+                        android:id="@+id/tvPainLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Are you experiencing chest pain?"
@@ -177,7 +187,7 @@
 
                         <Button
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="54dp"
                             android:layout_weight="1"
                             android:layout_marginEnd="8dp"
                             android:backgroundTint="#2563EB"
@@ -187,23 +197,26 @@
 
                         <Button
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="54dp"
                             android:layout_weight="1"
                             android:backgroundTint="#E2E8F0"
                             android:text="No"
                             android:textAllCaps="false"
-                            android:textColor="#475569" />
+                            android:textColor="#1E293B" />
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tvSymptomLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:text="Can you describe your symptoms?"
                         android:textColor="#1E293B"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:labelFor="@+id/etSymptomDescription" />
 
                     <EditText
+                        android:id="@+id/etSymptomDescription"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_marginTop="12dp"
@@ -211,7 +224,8 @@
                         android:gravity="top"
                         android:hint="Type here..."
                         android:padding="12dp"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:inputType="textMultiLine" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -231,6 +245,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_info"
+                        android:contentDescription="Help Icon"
                         app:tint="#854D0E" />
                     <LinearLayout
                         android:layout_width="wrap_content"

@@ -6,7 +6,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,18 +14,12 @@ public class WelcomeActivity extends AppCompatActivity {
         Button loginBtn = findViewById(R.id.btnLogin);
         Button signUpBtn = findViewById(R.id.btnSignUp);
 
-        // Navigate to Login
         loginBtn.setOnClickListener(v -> {
-            // We will create LoginActivity next to fix the red error
-            Intent intent = new Intent(WelcomeActivity.this, LoginActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
         });
 
-        // Navigate to Signup
         signUpBtn.setOnClickListener(v -> {
-            // We will create SignupActivity next to fix the red error
-            Intent intent = new Intent(WelcomeActivity.this, SignupActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(WelcomeActivity.this, SignupActivity.class));
         });
     }
 }
