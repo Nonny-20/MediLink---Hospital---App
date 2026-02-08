@@ -6,19 +6,25 @@
     android:background="#F8FAFC">
 
     <RelativeLayout
-        android:id="@+id/header"
+        android:id="@+id/chatHeader"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/primary_blue"
-        android:padding="16dp"
+        android:layout_height="100dp"
+        android:background="@color/ml_blue"
+        android:paddingTop="32dp"
+        android:paddingHorizontal="16dp"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/btnBack"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/ic_back"
+            android:id="@+id/btnBackChat"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Go back to dashboard"
             app:tint="@color/white" />
 
         <TextView
@@ -34,8 +40,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header">
+        app:layout_constraintTop_toBottomOf="@id/chatHeader">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,11 +51,15 @@
             android:padding="20dp">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardAIAssistant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="2dp"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -60,6 +71,8 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/ic_communication"
+                        android:background="#EFF6FF"
+                        android:padding="8dp"
                         app:tint="#3B82F6" />
 
                     <LinearLayout
@@ -88,11 +101,15 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardDoctorChat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="2dp"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -103,7 +120,9 @@
                         android:id="@+id/iconDoc"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_person"
+                        android:src="@drawable/ic_user_circle"
+                        android:background="#ECFDF5"
+                        android:padding="8dp"
                         app:tint="#10B981" />
 
                     <LinearLayout
@@ -139,7 +158,8 @@
                 android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="16dp"
-                android:textColor="#1E293B"/>
+                android:textColor="@color/primary_blue"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -148,14 +168,19 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="12dp">
+                    android:paddingVertical="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
 
                     <ImageView
                         android:id="@+id/imgDoc1"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/ic_person"
-                        app:tint="@color/primary_blue" />
+                        android:src="@drawable/ic_user_circle"
+                        android:background="#F1F5F9"
+                        android:padding="8dp"
+                        app:tint="@color/ml_blue" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -212,13 +237,18 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="12dp">
+                    android:paddingVertical="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
 
                     <ImageView
                         android:id="@+id/imgSupport"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/ic_communication"
+                        android:background="#F1F5F9"
+                        android:padding="8dp"
                         app:tint="#64748B" />
 
                     <LinearLayout
@@ -254,7 +284,6 @@
                 </RelativeLayout>
 
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

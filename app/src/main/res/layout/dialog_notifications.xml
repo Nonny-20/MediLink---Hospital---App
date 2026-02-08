@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_rounded_bg"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:background="#CBD5E1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Settings"
+            android:textColor="#1E293B"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnCloseNotifDialog"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:padding="4dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="#64748B" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/NotificationRowStyle">
+        <TextView android:text="Appointments" style="@style/NotificationTextStyle" />
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchAppointments"
+            style="@style/NotificationSwitchStyle"
+            android:checked="true" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/NotificationRowStyle">
+        <TextView android:text="Medications" style="@style/NotificationTextStyle" />
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchMedications"
+            style="@style/NotificationSwitchStyle"
+            android:checked="true" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/NotificationRowStyle">
+        <TextView android:text="News" style="@style/NotificationTextStyle" />
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchNews"
+            style="@style/NotificationSwitchStyle"
+            android:checked="false" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/NotificationRowStyle">
+        <TextView android:text="Emergency" style="@style/NotificationTextStyle" />
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchEmergency"
+            style="@style/NotificationSwitchStyle"
+            android:checked="true" />
+    </RelativeLayout>
+
+</LinearLayout>

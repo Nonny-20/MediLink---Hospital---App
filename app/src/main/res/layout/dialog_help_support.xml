@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_rounded_bg"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:background="#CBD5E1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help &amp; Support"
+            android:textColor="#1E293B"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnCloseHelpDialog"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:padding="4dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="#64748B" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/btnFaq"
+        style="@style/PrivacyRowStyle">
+        <TextView android:text="FAQ" style="@style/PrivacyTitleStyle" />
+        <TextView android:text="Frequently asked questions" style="@style/PrivacySubtextStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnEmailSupport"
+        style="@style/PrivacyRowStyle"
+        android:backgroundTint="#F0F7FF"> <TextView android:text="Contact Support" style="@style/PrivacyTitleStyle" />
+        <TextView android:text="support@medilink.com" style="@style/PrivacySubtextStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnCallSupport"
+        style="@style/PrivacyRowStyle"
+        android:backgroundTint="#F0F7FF">
+        <TextView android:text="Call Us" style="@style/PrivacyTitleStyle" />
+        <TextView android:text="+27 11 123 4567" style="@style/PrivacySubtextStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnTutorials"
+        style="@style/PrivacyRowStyle">
+        <TextView android:text="Tutorial Videos" style="@style/PrivacyTitleStyle" />
+        <TextView android:text="Learn how to use MediLink" style="@style/PrivacySubtextStyle" />
+    </LinearLayout>
+
+</LinearLayout>

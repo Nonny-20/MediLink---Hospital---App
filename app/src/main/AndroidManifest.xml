@@ -34,6 +34,13 @@
         <activity android:name=".SettingsActivity" android:exported="false" />
 
         <activity android:name=".ChatActivity" android:exported="false" />
+
+        <activity
+            android:name=".ChatDetailActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait" />
+
         <activity android:name=".EmergencyActivity" android:exported="false" />
         <activity android:name=".AlertSummaryActivity" android:exported="false" />
 
