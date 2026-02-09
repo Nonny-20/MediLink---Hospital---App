@@ -1,4 +1,4 @@
-package com.fmtaliproject.MediLink;
+package com.fmtaliproject.MediLink.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,10 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import com.fmtaliproject.MediLink.R;
+import com.fmtaliproject.MediLink.chat.ChatActivity;
+import com.fmtaliproject.MediLink.emergency.EmergencyActivity;
 
 public class HomeActivity extends AppCompatActivity {
 

@@ -1,8 +1,10 @@
-package com.fmtaliproject.MediLink;
+package com.fmtaliproject.MediLink.activities;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import com.fmtaliproject.MediLink.R;
 
 public class ProfileActivity extends AppCompatActivity {
     @Override

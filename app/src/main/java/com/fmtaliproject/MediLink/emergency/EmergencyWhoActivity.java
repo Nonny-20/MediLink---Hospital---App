@@ -1,11 +1,12 @@
-package com.fmtaliproject.MediLink;
+package com.fmtaliproject.MediLink.emergency;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import com.fmtaliproject.MediLink.R;
 
 public class EmergencyWhoActivity extends AppCompatActivity {
 

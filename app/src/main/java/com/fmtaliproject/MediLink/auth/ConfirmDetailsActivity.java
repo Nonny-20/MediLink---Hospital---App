@@ -1,10 +1,13 @@
-package com.fmtaliproject.MediLink;
+package com.fmtaliproject.MediLink.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.fmtaliproject.MediLink.activities.HomeActivity;
+import com.fmtaliproject.MediLink.R;
 
 public class ConfirmDetailsActivity extends AppCompatActivity {
 

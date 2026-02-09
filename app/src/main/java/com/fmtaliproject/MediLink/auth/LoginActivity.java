@@ -1,4 +1,4 @@
-package com.fmtaliproject.MediLink;
+package com.fmtaliproject.MediLink.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.fmtaliproject.MediLink.R;
+import com.fmtaliproject.MediLink.activities.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
 

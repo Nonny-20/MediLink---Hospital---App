@@ -1,8 +1,10 @@
-package com.fmtaliproject.MediLink;
+package com.fmtaliproject.MediLink.auth;
 
 import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.fmtaliproject.MediLink.R;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
     @Override

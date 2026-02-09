@@ -1,4 +1,4 @@
-package com.fmtaliproject.MediLink;
+package com.fmtaliproject.MediLink.chat;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.fmtaliproject.MediLink.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;

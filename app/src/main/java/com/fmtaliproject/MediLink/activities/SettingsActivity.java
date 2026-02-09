@@ -1,4 +1,4 @@
-package com.fmtaliproject.MediLink;
+package com.fmtaliproject.MediLink.activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,6 +10,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
+
+import com.fmtaliproject.MediLink.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class SettingsActivity extends AppCompatActivity {

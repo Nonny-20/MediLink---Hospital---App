@@ -1,4 +1,4 @@
-package com.fmtaliproject.MediLink;
+package com.fmtaliproject.MediLink.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.fmtaliproject.MediLink.auth.LoginActivity;
+import com.fmtaliproject.MediLink.R;
+import com.fmtaliproject.MediLink.auth.SignupActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
 
