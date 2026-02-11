@@ -7,8 +7,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.fmtaliproject.MediLink.R;
+// Standard imports
 import com.fmtaliproject.MediLink.chat.ChatActivity;
-import com.fmtaliproject.MediLink.emergency.EmergencyActivity;
+// Ensure these paths match your actual folder structure:
+// import com.fmtaliproject.MediLink.activities.BookingActivity;
+// import com.fmtaliproject.MediLink.activities.SettingsActivity;
+// import com.fmtaliproject.MediLink.activities.ProfileActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,34 +21,40 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 1. Emergency
-        CardView cardEmergency = findViewById(R.id.cardEmergency);
-        if (cardEmergency != null) {
-            cardEmergency.setOnClickListener(v -> startActivity(new Intent(this, EmergencyActivity.class)));
-        }
-
-        // 2. Chat
+        // 1. Chat & AI Support
         CardView cardChat = findViewById(R.id.cardChat);
         if (cardChat != null) {
-            cardChat.setOnClickListener(v -> startActivity(new Intent(this, ChatActivity.class)));
+            cardChat.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+                startActivity(intent);
+            });
         }
 
-        // 3. Booking - This will now work without the error
+        // 2. Booking New Appointment
         CardView btnGoToBooking = findViewById(R.id.btnGoToBooking);
         if (btnGoToBooking != null) {
-            btnGoToBooking.setOnClickListener(v -> startActivity(new Intent(this, BookingActivity.class)));
+            btnGoToBooking.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, BookingActivity.class);
+                startActivity(intent);
+            });
         }
 
-        // 4. Settings
+        // 3. Settings (Top Right Icon)
         ImageView btnSettings = findViewById(R.id.btnSettings);
         if (btnSettings != null) {
-            btnSettings.setOnClickListener(v -> startActivity(new Intent(this, SettingsActivity.class)));
+            btnSettings.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            });
         }
 
-        // 5. Profile
+        // 4. Profile (Top Right Icon)
         ImageView btnProfile = findViewById(R.id.btnProfile);
         if (btnProfile != null) {
-            btnProfile.setOnClickListener(v -> startActivity(new Intent(this, ProfileActivity.class)));
+            btnProfile.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            });
         }
     }
 }
