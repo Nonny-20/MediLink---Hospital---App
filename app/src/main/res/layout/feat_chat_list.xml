@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_slate">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chatHeader"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/ml_slate_primary"
+        android:paddingTop="32dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnBackChat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardBackgroundColor="#22FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_chevron_right"
+                android:rotation="180"
+                app:tint="@color/white" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Communication"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnBackChat"
+            android:layout_marginStart="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="-30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chatHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardAIAssistant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
+                    <ImageView
+                        android:id="@+id/iconAI"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:src="@drawable/ic_communication"
+                        android:background="@color/bg_light_slate"
+                        android:padding="10dp"
+                        app:tint="@color/ml_teal_primary" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iconAI"
+                        android:layout_marginStart="16dp"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AI Health Assistant" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/ml_slate_dark"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Instant medical guidance 24/7" android:textColor="@color/text_subtitle" android:textSize="13sp"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardDoctorChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
+                    <ImageView
+                        android:id="@+id/iconDoc"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:src="@drawable/ic_user_circle"
+                        android:background="@color/bg_light_slate"
+                        android:padding="10dp"
+                        app:tint="@color/ml_slate_primary" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/iconDoc"
+                        android:layout_marginStart="16dp"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Direct Message Doctor" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/ml_slate_dark"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speak with your healthcare provider" android:textColor="@color/text_subtitle" android:textSize="13sp"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Conversations"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/ml_slate_dark"
+                android:layout_marginStart="4dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true">
+
+                        <ImageView
+                            android:id="@+id/imgDoc1"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/ic_user_circle"
+                            android:background="@color/bg_light_slate"
+                            android:padding="10dp"
+                            app:tint="@color/ml_slate_primary" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/imgDoc1"
+                            android:layout_marginStart="16dp"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true">
+
+                            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dr. Sarah Johnson" android:textStyle="bold" android:textColor="@color/ml_slate_dark" android:textSize="15sp" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2h ago" android:textColor="@color/text_subtitle" android:textSize="11sp" android:layout_alignParentEnd="true"/>
+                            </RelativeLayout>
+
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Your lab results are ready for review..." android:textColor="@color/text_subtitle" android:textSize="13sp" android:maxLines="1" android:ellipsize="end" android:layout_marginTop="2dp" android:layout_marginEnd="20dp"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/gray_border" android:layout_marginStart="84dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true">
+
+                        <ImageView
+                            android:id="@+id/imgSupport"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/ic_communication"
+                            android:background="@color/bg_light_slate"
+                            android:padding="10dp"
+                            app:tint="@color/text_subtitle" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/imgSupport"
+                            android:layout_marginStart="16dp"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true">
+
+                            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MediLink Support" android:textStyle="bold" android:textColor="@color/ml_slate_dark" android:textSize="15sp" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yesterday" android:textColor="@color/text_subtitle" android:textSize="11sp" android:layout_alignParentEnd="true"/>
+                            </RelativeLayout>
+
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="How can we help you today?" android:textColor="@color/text_subtitle" android:textSize="13sp" android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

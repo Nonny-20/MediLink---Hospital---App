@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingBottom="32dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="24dp"
+        android:background="#CBD5E1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appointment Details"
+        android:textColor="@color/ml_slate_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select how you'd like to meet"
+        android:textColor="@color/text_subtitle"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardInPerson"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            android:clickable="true"
+            android:focusable="true">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_location" app:tint="@color/ml_slate_primary" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="In-Person" android:textColor="@color/ml_slate_dark" android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardVirtual"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            android:clickable="true"
+            android:focusable="true">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_call" app:tint="@color/ml_teal_primary" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Virtual" android:textColor="@color/ml_slate_dark" android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferred Date"
+        android:textColor="@color/ml_slate_dark"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:hint="Select date"
+        android:padding="16dp"
+        android:focusable="false"
+        android:clickable="true"
+        android:background="@android:drawable/editbox_background_normal"
+        android:backgroundTint="#F1F5F9"
+        android:drawableEnd="@drawable/ic_calendar"
+        app:drawableTint="@color/ml_slate_primary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reason for Appointment"
+        android:textColor="@color/ml_slate_dark"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/etReason"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="8dp"
+        android:hint="Describe your symptoms..."
+        android:gravity="top"
+        android:padding="16dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:backgroundTint="#F1F5F9"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/ml_teal_primary"
+        android:text="Confirm Booking"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="16dp" />
+
+</LinearLayout>

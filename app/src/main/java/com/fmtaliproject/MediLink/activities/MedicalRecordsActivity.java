@@ -10,7 +10,7 @@ public class MedicalRecordsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medical_records);
+        setContentView(R.layout.feat_records);
 
         // Simple Back Navigation
         CardView btnBack = findViewById(R.id.btnBack);

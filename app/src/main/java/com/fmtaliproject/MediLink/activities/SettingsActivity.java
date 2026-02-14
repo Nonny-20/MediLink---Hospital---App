@@ -19,7 +19,7 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.main_settings);
 
         // 1. Back Button Functionality
         ImageView btnBack = findViewById(R.id.btnBackSettings);
@@ -53,7 +53,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void showLanguageDialog() {
         BottomSheetDialog dialog = new BottomSheetDialog(this);
-        View view = getLayoutInflater().inflate(R.layout.dialog_language_selector, null);
+        View view = getLayoutInflater().inflate(R.layout.dialog_language, null);
         dialog.setContentView(view);
         view.findViewById(R.id.btnCloseDialog).setOnClickListener(v -> dialog.dismiss());
         dialog.show();
@@ -61,7 +61,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void showThemeDialog() {
         BottomSheetDialog dialog = new BottomSheetDialog(this);
-        View view = getLayoutInflater().inflate(R.layout.dialog_theme_selector, null);
+        View view = getLayoutInflater().inflate(R.layout.dialog_theme, null);
         dialog.setContentView(view);
 
         view.findViewById(R.id.btnDarkMode).setOnClickListener(v -> {
@@ -86,7 +86,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void showPrivacyDialog() {
         BottomSheetDialog dialog = new BottomSheetDialog(this);
-        View view = getLayoutInflater().inflate(R.layout.dialog_privacy_security, null);
+        View view = getLayoutInflater().inflate(R.layout.dialog_privacy, null);
         dialog.setContentView(view);
         view.findViewById(R.id.btnClosePrivacyDialog).setOnClickListener(v -> dialog.dismiss());
         dialog.show();
@@ -94,7 +94,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void showHelpDialog() {
         BottomSheetDialog dialog = new BottomSheetDialog(this);
-        View view = getLayoutInflater().inflate(R.layout.dialog_help_support, null);
+        View view = getLayoutInflater().inflate(R.layout.dialog_help, null);
         dialog.setContentView(view);
 
         view.findViewById(R.id.btnCloseHelpDialog).setOnClickListener(v -> dialog.dismiss());
@@ -109,7 +109,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void showAboutDialog() {
         BottomSheetDialog dialog = new BottomSheetDialog(this);
-        View view = getLayoutInflater().inflate(R.layout.dialog_about_us, null);
+        View view = getLayoutInflater().inflate(R.layout.dialog_about, null);
         dialog.setContentView(view);
         view.findViewById(R.id.btnCloseAbout).setOnClickListener(v -> dialog.dismiss());
         dialog.show();
@@ -117,7 +117,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void showTermsDialog() {
         BottomSheetDialog dialog = new BottomSheetDialog(this);
-        View view = getLayoutInflater().inflate(R.layout.dialog_terms_conditions, null);
+        View view = getLayoutInflater().inflate(R.layout.dialog_terms, null);
         dialog.setContentView(view);
         view.findViewById(R.id.btnCloseTerms).setOnClickListener(v -> dialog.dismiss());
         dialog.show();

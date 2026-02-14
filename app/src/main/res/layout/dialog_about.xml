@@ -17,6 +17,7 @@
             android:layout_height="28dp"
             android:layout_alignParentEnd="true"
             android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Close Dialog"
             app:tint="#64748B" />
     </RelativeLayout>
 
@@ -24,7 +25,8 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/medilink_logo_icon" />
+        android:src="@drawable/medilink_logo_icon"
+        android:contentDescription="MediLink Logo" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -5,31 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#FFFFFF">
+    android:background="@color/bg_light_slate">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
-        android:layout_marginTop="32dp"> <TextView
-        android:id="@+id/tvBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="← Back"
-        android:textColor="@color/ml_blue"
-        android:textStyle="bold"
-        android:padding="12dp"
-        android:layout_marginStart="-12dp"
-        android:textSize="16sp"
-        android:clickable="true"
-        android:focusable="true" />
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Back"
+            android:textColor="@color/ml_slate_primary"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginStart="-12dp"
+            android:gravity="center_vertical"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create Account"
-            android:textColor="@color/ml_navy"
+            android:textColor="@color/ml_slate_dark"
             android:textSize="28sp"
             android:textStyle="bold"
             android:layout_marginTop="8dp" />
@@ -39,17 +45,10 @@
             android:layout_height="6dp"
             android:layout_marginTop="16dp"
             android:weightSum="4">
-            <View android:id="@+id/bar1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/ml_blue" android:layout_marginEnd="4dp"/>
-
-            <View
-                android:id="@+id/bar2"
-                android:layout_width="121dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="4dp"
-                android:layout_weight="1"
-                android:background="@color/ml_gray" />
-            <View android:id="@+id/bar3" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:background="@color/ml_gray" android:layout_marginEnd="4dp"/>
-            <View android:id="@+id/bar4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/ml_gray"/>
+            <View android:id="@+id/bar1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/ml_teal_accent" android:layout_marginEnd="4dp"/>
+            <View android:id="@+id/bar2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/gray_border" android:layout_marginEnd="4dp" />
+            <View android:id="@+id/bar3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/gray_border" android:layout_marginEnd="4dp"/>
+            <View android:id="@+id/bar4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/gray_border"/>
         </LinearLayout>
 
         <TextView
@@ -58,7 +57,7 @@
             android:layout_height="wrap_content"
             android:text="Step 1 of 4"
             android:layout_marginTop="8dp"
-            android:textColor="#64748B" />
+            android:textColor="@color/text_subtitle" />
 
         <ViewFlipper
             android:id="@+id/signupFlipper"
@@ -67,7 +66,7 @@
             android:layout_marginTop="20dp">
 
             <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Personal Information" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/ml_navy"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Personal Information" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/ml_slate_dark"/>
                 <EditText android:id="@+id/etFirstName" android:layout_width="match_parent" android:layout_height="55dp" android:hint="First Name" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="16dp" android:inputType="textPersonName"/>
                 <EditText android:id="@+id/etSurname" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Surname" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:inputType="textPersonName"/>
                 <EditText android:id="@+id/etIDNumber" android:layout_width="match_parent" android:layout_height="55dp" android:hint="ID Number" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:inputType="number"/>
@@ -75,21 +74,21 @@
             </LinearLayout>
 
             <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact &amp; Address" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/ml_navy"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact &amp; Address" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/ml_slate_dark"/>
                 <EditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Email Address" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="16dp" android:inputType="textEmailAddress"/>
                 <EditText android:id="@+id/etPhone" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Phone Number" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:inputType="phone"/>
                 <EditText android:id="@+id/etAddress" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Residential Address" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:inputType="textPostalAddress"/>
             </LinearLayout>
 
             <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Medical Information" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/ml_navy"/>
-                <CheckBox android:id="@+id/cbMedicalAid" android:layout_width="match_parent" android:layout_height="60dp" android:text="I have Medical Aid" android:layout_marginTop="16dp" android:buttonTint="@color/ml_blue" android:background="@drawable/input_background" android:paddingStart="12dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Medical Information" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/ml_slate_dark"/>
+                <CheckBox android:id="@+id/cbMedicalAid" android:layout_width="match_parent" android:layout_height="60dp" android:text="I have Medical Aid" android:layout_marginTop="16dp" android:buttonTint="@color/ml_teal_accent" android:background="@drawable/input_background" android:paddingStart="12dp"/>
                 <EditText android:id="@+id/etMedicalProvider" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Provider Name" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:visibility="gone"/>
                 <EditText android:id="@+id/etMedicalNumber" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Member Number" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:visibility="gone"/>
             </LinearLayout>
 
             <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Login Details" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/ml_navy"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Login Details" android:textStyle="bold" android:textSize="18sp" android:textColor="@color/ml_slate_dark"/>
                 <EditText android:id="@+id/etPassword" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Password" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="16dp" android:inputType="textPassword"/>
                 <EditText android:id="@+id/etConfirmPassword" android:layout_width="match_parent" android:layout_height="55dp" android:hint="Confirm Password" android:background="@drawable/input_background" android:padding="12dp" android:layout_marginTop="12dp" android:inputType="textPassword"/>
             </LinearLayout>
@@ -101,8 +100,10 @@
             android:layout_height="60dp"
             android:layout_marginTop="40dp"
             android:text="Next"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="@color/ml_blue"
+            android:textAllCaps="false"
+            android:textColor="@color/ml_slate_dark"
+            android:textStyle="bold"
+            android:backgroundTint="@color/ml_teal_accent"
             app:cornerRadius="12dp" />
 
     </LinearLayout>

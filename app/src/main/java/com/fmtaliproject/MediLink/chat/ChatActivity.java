@@ -1,11 +1,9 @@
 package com.fmtaliproject.MediLink.chat;
 
 import android.os.Bundle;
-import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-
 import com.fmtaliproject.MediLink.R;
 
 public class ChatActivity extends AppCompatActivity {
@@ -13,34 +11,32 @@ public class ChatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat);
+        setContentView(R.layout.feat_chat_list); // Ensure this matches your XML file name
 
-        // 1. Back Button Logic
-        ImageView btnBack = findViewById(R.id.btnBackChat);
+        // 1. Initialize Views
+        CardView btnBack = findViewById(R.id.btnBackChat);
+        CardView cardAI = findViewById(R.id.cardAIAssistant);
+        CardView cardDoctor = findViewById(R.id.cardDoctorChat);
+
+        // 2. Back Button Logic
         if (btnBack != null) {
             btnBack.setOnClickListener(v -> finish());
         }
 
-        // 2. AI Assistant Navigation
-        CardView cardAI = findViewById(R.id.cardAIAssistant);
+        // 3. AI Assistant Click
         if (cardAI != null) {
             cardAI.setOnClickListener(v -> {
-                // For now, showing a message. Later, link to your AI Activity.
-                Toast.makeText(this, "Opening AI Assistant...", Toast.LENGTH_SHORT).show();
-                // startActivity(new Intent(this, AIAssistantActivity.class));
+                // Future: Intent to AIChatActivity
+                Toast.makeText(this, "Opening AI Health Assistant...", Toast.LENGTH_SHORT).show();
             });
         }
 
-        // 3. Doctor Messaging Navigation
-        CardView cardDoctor = findViewById(R.id.cardDoctorChat);
+        // 4. Direct Message Click
         if (cardDoctor != null) {
             cardDoctor.setOnClickListener(v -> {
+                // Future: Intent to DoctorListActivity or specific Chat
                 Toast.makeText(this, "Connecting to your Doctor...", Toast.LENGTH_SHORT).show();
             });
         }
-
-        // 4. Recent Conversation (Dr. Sarah Johnson)
-        // Note: In a real app, you'd use a RecyclerView here.
-        // For your presentation, you can just set a click listener on the RelativeLayout.
     }
 }

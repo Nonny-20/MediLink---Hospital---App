@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.fmtaliproject.MediLink.auth.LoginActivity;
 import com.fmtaliproject.MediLink.R;
+// Corrected imports: Removing ".activities" because 'auth' is its own folder
+import com.fmtaliproject.MediLink.auth.LoginActivity;
 import com.fmtaliproject.MediLink.auth.SignupActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -20,38 +21,40 @@ public class WelcomeActivity extends AppCompatActivity {
         // 1. Initialize SharedPreferences
         SharedPreferences sharedPref = getSharedPreferences("MediLinkPrefs", Context.MODE_PRIVATE);
 
-        // 2. Check if this is the first time (default is true if the key doesn't exist)
+        // 2. Check if this is the first time the app is opened
         boolean isFirstTime = sharedPref.getBoolean("isFirstOpen", true);
 
         if (!isFirstTime) {
-            // If NOT the first time, jump straight to HomeActivity
-            Intent intent = new Intent(WelcomeActivity.this, HomeActivity.class);
+            // Returning user: Go straight to Login
+            Intent intent = new Intent(WelcomeActivity.this, LoginActivity.class);
             startActivity(intent);
-            finish(); // Close WelcomeActivity so user can't "back" into it
-            return;   // Stop executing the rest of this method
+            finish();
+            return;
         }
 
-        // 3. If it IS the first time, show the layout and setup buttons
-        setContentView(R.layout.activity_welcome);
+        // 3. First-time user: Show the Welcome layout
+        setContentView(R.layout.auth_welcome);
 
         Button loginBtn = findViewById(R.id.btnLogin);
         Button signUpBtn = findViewById(R.id.btnSignUp);
 
-        loginBtn.setOnClickListener(v -> {
-            markFirstTimeDone(sharedPref);
-            startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
-        });
+        if (loginBtn != null) {
+            loginBtn.setOnClickListener(v -> {
+                markFirstTimeDone(sharedPref);
+                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+                finish();
+            });
+        }
 
-        signUpBtn.setOnClickListener(v -> {
-            markFirstTimeDone(sharedPref);
-            startActivity(new Intent(WelcomeActivity.this, SignupActivity.class));
-        });
+        if (signUpBtn != null) {
+            signUpBtn.setOnClickListener(v -> {
+                markFirstTimeDone(sharedPref);
+                startActivity(new Intent(WelcomeActivity.this, SignupActivity.class));
+                finish();
+            });
+        }
     }
 
-    /**
-     * Helper method to save the "returning user" flag so this screen
-     * won't show up again on the next app launch.
-     */
     private void markFirstTimeDone(SharedPreferences pref) {
         SharedPreferences.Editor editor = pref.edit();
         editor.putBoolean("isFirstOpen", false);

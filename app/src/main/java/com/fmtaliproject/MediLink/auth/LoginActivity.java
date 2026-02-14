@@ -9,17 +9,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.fmtaliproject.MediLink.R;
-import com.fmtaliproject.MediLink.activities.MainActivity;
+import com.fmtaliproject.MediLink.activities.HomeActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.auth_login);
 
-        // 1. INITIALIZE variables by linking them to XML IDs
-        // Note: We use R.id.btnForgot because that is what is in your XML
+        // 1. Initialize variables by linking them to XML IDs
         TextView btnBack = findViewById(R.id.btnBack);
         EditText etPatientId = findViewById(R.id.etPatientId);
         EditText etPassword = findViewById(R.id.etPassword);
@@ -31,18 +30,28 @@ public class LoginActivity extends AppCompatActivity {
             String id = etPatientId.getText().toString().trim();
             String pass = etPassword.getText().toString();
 
-            if (id.equals("ML-12345") && pass.equals("Pass123!")) {
-                startActivity(new Intent(this, MainActivity.class));
+            // Simple validation: Check if fields are not empty
+            if (!id.isEmpty() && !pass.isEmpty()) {
+                // SUCCESS: Redirect to HomeActivity
+                Intent intent = new Intent(this, HomeActivity.class);
+                startActivity(intent);
+
+                // Close LoginActivity so user cannot "back" into it
                 finish();
             } else {
-                Toast.makeText(this, "Invalid ID or Password", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please enter your ID and Password", Toast.LENGTH_SHORT).show();
             }
         });
 
-        // 3. Handle Navigation
-        tvForgot.setOnClickListener(v ->
-                startActivity(new Intent(this, ForgotPasswordActivity.class)));
+        // 3. Handle Navigation to Forgot Password
+        if (tvForgot != null) {
+            tvForgot.setOnClickListener(v ->
+                    startActivity(new Intent(this, ForgotPasswordActivity.class)));
+        }
 
-        btnBack.setOnClickListener(v -> finish());
+        // 4. Handle Back Button (takes user back to Welcome screen)
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> finish());
+        }
     }
 }

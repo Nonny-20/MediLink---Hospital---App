@@ -1,42 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary_blue">#2563EB</color>
-    <color name="medilink_navy">#2E3A59</color>
-    <color name="medilink_blue">#2563EB</color>
-    <color name="medilink_light_blue">#3B82F6</color>
-    <color name="medilink_turquoise">#2DD4BF</color>
-
+    <color name="ml_slate_primary">#243B53</color>
+    <color name="ml_teal_accent">#34D399</color>
+    <color name="ml_slate_dark">#102A43</color>
     <color name="white">#FFFFFF</color>
-    <color name="white_translucent">#33FFFFFF</color>
+    <color name="bg_light_slate">#F0F4F8</color>
     <color name="gray_border">#CBD5E1</color>
-    <color name="text_gray">#64748B</color>
-    <color name="bg_light_blue">#F0F9FF</color> <color name="text_subtitle">#94A3B8</color> <color name="medilink_info_bg">#E0F7FA</color>
-    <color name="medilink_info_text">#475569</color>
+    <color name="text_main">#334155</color>
+    <color name="text_subtitle">#94A3B8</color>
     <color name="alert_green_bg">#F0FDF4</color>
-    <color name="alert_green_text">#166534</color>
+    <color name="alert_green_text">#10B981</color>
     <color name="alert_green_border">#BBF7D0</color>
-
-    <color name="emergency_red">#EF4444</color>
-    <color name="emergency_orange">#F59E0B</color>
-    <color name="emergency_yellow">#FACC15</color>
-    <color name="emergency_overlay">#CC000000</color>
-    <color name="emergency_bg">#0F172A</color>
-    <color name="emergency_red_glow">#44EF4444</color>
-
+    <color name="ml_teal_primary">#0D9488</color>
     <color name="ml_blue">#2563EB</color>
-    <color name="ml_green">#10B981</color>
-    <color name="ml_gray">#E2E8F0</color>
-    <color name="ml_navy">#1E293B</color>
-    <color name="ml_red">#DC2626</color>
-    <color name="ml_light_blue">#EFF6FF</color>
-    <color name="ml_light_orange">#FFF7ED</color>
-    <color name="ml_blue_dark">#1E40AF</color>
-    <color name="ml_tag_blue">#3B82F6</color>
-    <color name="ml_tag_teal">#2DD4BF</color>
-    <color name="ml_btn_blue">#2563EB</color>
-    <color name="ml_btn_gray_light">#E2E8F0</color>
-    <color name="ml_yellow_bg">#FEFCE8</color>
-    <color name="ml_yellow_text">#854D0E</color>
-    <color name="ml_yellow_border">#FEF08A</color>
+
+    <color name="primary_blue">#0284C7</color>
+
     <color name="input_field_stroke">#CBD5E1</color>
+    <color name="white_translucent">#33FFFFFF</color>
+    <color name="ml_blue_dark">#102A43</color>
 </resources>
